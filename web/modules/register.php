@@ -257,8 +257,8 @@ include '../../function.php';
             <!-- Buttons -->
             <div class="row mt-4 mb-5">
               <div class="col-10 d-flex justify-content-end">
-                <button class="success-btn px-5 mx-2">Submit</button>
-                <button type="button" class="fail-btn px-5">Cancel</button>
+                <button class="success-btn mx-2">Submit</button>
+                <button class="fail-btn">Cancel</button>
               </div>
             </div>
 

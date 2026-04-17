@@ -18,41 +18,40 @@
 
   <!-- ***** Header Area ***** -->
 
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color:var(--secondary)">
-      <a href="index.html" class="logo">
-        <img src="<?=  WEB_URL ?>assets/images/logoPV.png" width="40" height="50" class="m-1">
+  <div class="row m-0 p-0">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light col-11" style="background-color:var(--secondary)">
+      <a href="<?= WEB_URL ?>index.php" class="logo">
+        <img src="<?=  WEB_URL ?>assets/images/logoPV.png" width="40" height="50" class="ms-4">
       </a>
-      <a class="navbar-brand" href="#">Praveesha Villas</a>
+      <a class="navbar-brand" href="<?= WEB_URL ?>index.php"><h3 class="h3 m-0 p-0 ms-4">Praveesha Villas</h3></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
+        <ul class="navbar-nav mr-auto d-flex align-items-center">
+          <li class="nav-item me-5">
             <a class="nav-link navbar_titles" href="<?= WEB_URL ?>index.php">Home</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item me-5">
             <a class="nav-link navbar_titles" href="<?= WEB_URL ?>modules/about_us.php">About Us</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item me-5">
             <a class="nav-link navbar_titles" href="<?= WEB_URL ?>modules/villa.php">Villas</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item me-5">
             <a class="nav-link navbar_titles" href="<?= WEB_URL ?>modules/gallery.php">Gallery</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item me-5">
             <a class="nav-link navbar_titles" href="<?= WEB_URL ?>modules/contact_us.php">Contact Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="btn success-btn buttonrounded-pill px-4 mx-1" href="<?= WEB_URL ?>modules/login.php">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="btn success-btn rounded-pill px-4 mx-1" href="<?= WEB_URL ?>modules/register.php">Register</a>
           </li>
         </ul>
       </div>
     </nav>
+    <div class="col-1 m-0 p-0">
+        <a class="btn nav-section" href="<?= WEB_URL ?>modules/login.php">Manage Booking</a>
+    </div>
+</div>
 
   <!-- ***** Header Area End ***** -->
 
@@ -107,7 +106,7 @@
         </div>
 
 </footer>
-=
+
   <!-- ***** Footer Area End ***** -->
 
   <!-- Java Scripts -->

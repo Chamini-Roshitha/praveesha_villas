@@ -210,7 +210,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Guest Mangement
@@ -219,7 +219,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="guest_mgt/view_guest.php" class="nav-link active">
+                <a href="guest_mgt/view_guest.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>View Students</p>
                 </a>
@@ -859,7 +859,7 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard v1</li>
+              <li class="breadcrumb-item">Dashboard v1</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->

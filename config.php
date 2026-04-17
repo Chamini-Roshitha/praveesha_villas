@@ -1,6 +1,6 @@
 <?php
-define('WEB_URL', 'http://localhost/praveesha_villa/web/');
-define('SYS_URL', 'http://localhost/test-praveeshavillas/system/');
+define('WEB_URL', 'http://localhost/praveesha_villas/web/');
+define('SYS_URL', 'http://localhost/praveesha_villas/system/');
 
 $_DB_SERVER = "localhost";
 $_DB_USERNAME = "roshi";

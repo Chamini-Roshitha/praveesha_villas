@@ -73,13 +73,18 @@ include '../../function.php';
                         <p> Forgot Password ? <a href="recover.php"> Recover password </a></p>
                     </div>
                 </div>
-                <div class="row mt-3 mb-5">
+                <div class="row mt-3 mb-5" >
                     <div class="col-10 d-flex justify-content-end">
-                        <button id="submit_btn" class="success-btn px-5 mx-4">Login</button>
-                        <button id="clear_btn" class="fail-btn px-5">Clear</button>
+                        <button id="submit_btn" class="success-btn mx-4" style="z-index: 1;">Login</button>
+                        <button id="clear_btn" class="fail-btn" style="z-index: 1;">Clear</button>
                     </div>
                 </div>
             </form>
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center">
+                    <img src="<?=  WEB_URL ?>assets/images/mountains.png" alt="mountains_1" style="width:100%; border-radius: 10px;position:absolute;bottom:0;left:0;z-index: 0;">
+                </div>
+            </div>
         </div>
     </div>
 

@@ -4,31 +4,31 @@
 
     --primary: #fffdd0;
     --primary_font: #895129;
-    --secondary: #f9E076;
-    --secondary_font: #ccdad9;
+    --secondary: #f6b452;
+    --secondary_font: #895129;
     --tertiary: #895129;
     --tertiary_font: #ffc107;
-    --fourth: #895129;
+    --Quaternary: #895129;
+    --Quaternary_font:#895129;
 
     --buttonx: #000000;
     --buttonx_font: #feffff;
     --buttony: #000000;
     --buttony_font: #ffffff;
 
-    --success: #2e6f40;
+    --success: #0e5116;
     --success_font: #ffffff;
     --fail: #960016;
     --fail_font: #feffff;
 
     --background: #000000;
+    --foreground: #ffffff;
     --background_transparent: #00000091;
     --background_translucent: #000000c4;
-    --foreground: #ffffff;
     --glow: #000000;
     --shadow: #ffffff;
     --overlay: #ffffff;
 
-    --background_img_03 :"";
 }
 
 @font-face {
@@ -55,9 +55,8 @@
 }
 
 body {
-    background-color: #3f3d3d;
+    background-color:#c1e1c5;
 }
-
 
 h2 {
     color: var(--primary_font);
@@ -77,10 +76,6 @@ p {
 
 a {
     color: var(--secondary_font);
-}
-
-button {
-    color: var(--primary_font);
 }
 
 label {
@@ -151,6 +146,7 @@ select {
     border-radius: 1vh;
     padding: 0.2vh;
     font-weight: bold;
+    width: 200px;
 }
 
 .fail-btn {
@@ -160,15 +156,7 @@ select {
     border-radius: 1vh;
     padding: 0.2vh;
     font-weight: bold;
-}
-
-.tiny-btn {
-    color: var(--success_font);
-    background-color: rgba(255, 255, 255, 0);
-    border: 0.1vh solid var(--success_font);
-    border-radius: 1vh;
-    padding: 0.2vh;
-    font-weight: bold;
+    width: 200px;
 }
 
 .nav-item {
@@ -177,6 +165,17 @@ select {
     align-items: center;
     text-align: center;
     height: 100%;
+}
+
+.nav-section {
+    color: var(--success_font);
+    background-color: var(--success);
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 0px;
+    height: 100%;
+    width: 100%;
 }
 
 .nav-selected {
@@ -229,11 +228,6 @@ select {
     transition: ease-in 0.5s;
 }
 
-.row {
-    margin: 0;
-    padding: 0;
-}
-
 .datepickers {
     background-color: rgba(255, 255, 255, 0);
     color: var(--primary_font);
@@ -248,6 +242,8 @@ select {
 
 /* effects */
 
+.nav-section:focus,
+.nav-section:hover,
 .success-btn:focus,
 .success-btn:hover {
     color: var(--success);
@@ -298,12 +294,38 @@ input:focus {
 }
 
 .banner{
-    background-image:  url('../images/banner-01.jpg');;
+    background-image:  url('../images/banner-01.jpg');
     background-repeat: repeat;
     background-size: 100vw;
     background-position: center;
-    background-clip: text;
-    -webkit-background-clip: text;
+}
+
+.banner2{
+    background-image:  url('../images/banner-02.jpg');
+    background-repeat: repeat;
+    background-size: 100vw;
+    background-position: center;
+}
+
+.banner3{
+    background-image:  url('../images/banner-03.jpg');
+    background-repeat: repeat;
+    background-size: 100vw;
+    background-position: center;
+}
+
+.banner4{
+    background-image:  url('../images/banner-04.jpg');
+    background-repeat: repeat;
+    background-size: 100vw;
+    background-position: center;
+}
+
+.banner5{
+    background-image:  url('../images/banner-05.jpg');
+    background-repeat: repeat;
+    background-size: 100vw;
+    background-position: center;
 }
 
 .whitetxt{

@@ -15,7 +15,7 @@ include '../../config.php'
         </div>
         <div class="col-lg-3">
             <div class="list-group">
-            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1">List group item heading</h5>
                 <small>3 days ago</small>
