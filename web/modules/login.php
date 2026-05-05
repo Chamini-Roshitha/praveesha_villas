@@ -20,7 +20,7 @@ include '../../function.php';
         if (empty($error)) {
             try{
                 $con=dbConnect();
-                $sql = "SELECT * FROM user where user_email =  '$email'";
+                $sql = "SELECT * FROM users where user_email =  '$email'";
                 $result = $con->query($sql);
                 if ($result->num_rows == 1) {
                     $row = $result->fetch_assoc();
@@ -51,7 +51,7 @@ include '../../function.php';
                     <div class="col-4 d-flex justify-content-end align-items-center">
                         <label>User Email</label>
                     </div>
-                    <div class="col-6 d-flex">
+                    <div class="col-6 d-flex" style="z-index: 1;">
                         <input type="text" name="user_email" id="user_email" placeholder="User Email" required />
                     </div>
                 </div>
@@ -59,7 +59,7 @@ include '../../function.php';
                     <div class="col-4 d-flex justify-content-end align-items-center">
                         <label>Password</label>
                     </div>
-                    <div class="col-6 d-flex">
+                    <div class="col-6 d-flex" style="z-index: 1;">
                         <input type="password" name="password" id="password" placeholder="Password" required />
                     </div>
                 </div>
@@ -69,8 +69,13 @@ include '../../function.php';
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-10 d-flex justify-content-end">
+                    <div class="col-10 d-flex justify-content-end" style="z-index: 1;">
                         <p> Forgot Password ? <a href="recover.php"> Recover password </a></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 d-flex justify-content-end" style="z-index: 1;">
+                        <p> Don't have a account ? <a href="register.php"> Create account</a></p>
                     </div>
                 </div>
                 <div class="row mt-3 mb-5" >

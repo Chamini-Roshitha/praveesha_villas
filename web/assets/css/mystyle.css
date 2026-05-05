@@ -3,13 +3,13 @@
 :root {
 
     --primary: #fffdd0;
-    --primary_font: #895129;
+    --primary_font:#895129;
     --secondary: #f6b452;
     --secondary_font: #895129;
     --tertiary: #895129;
     --tertiary_font: #ffc107;
-    --Quaternary: #895129;
-    --Quaternary_font:#895129;
+    --Quaternary: #FFF3E0;
+    --Quaternary_font: #FFF3E0;
 
     --buttonx: #000000;
     --buttonx_font: #feffff;
@@ -55,7 +55,7 @@
 }
 
 body {
-    background-color:#c1e1c5;
+    background-color:#fffdd0;
 }
 
 h2 {
@@ -71,7 +71,7 @@ h3 {
 }
 
 p {
-    color: var(--primary_font);
+    color: var(--Quaternary_font);
 }
 
 a {
@@ -239,6 +239,13 @@ select {
     margin: 0;
     border: none;
 }
+.villa_title {
+    display: block;          /* makes it behave like a div */
+    font-size: 26px;         /* bigger font */
+    font-weight: bold;
+    color: #895129;
+    margin-bottom: 10px;
+}
 
 /* effects */
 
@@ -330,4 +337,15 @@ input:focus {
 
 .whitetxt{
     color: #fffdd0;
+}
+.price-line {
+    font-size: 16px;
+    color: #555;
+}
+
+.price-value {
+    font-size: 28px;       /* bigger */
+    font-weight: bold;
+    color: #0e5116;        /* highlight color (like your example) */
+    margin: 0 5px;
 }

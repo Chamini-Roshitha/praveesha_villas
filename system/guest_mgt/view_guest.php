@@ -1,7 +1,9 @@
 <?php
 ob_start();
 include '../../config.php';
+include '../../function.php';
 ?>
+
 <div class="row">
     <div class="col-12">
     <div class="card">
@@ -20,54 +22,55 @@ include '../../config.php';
             </div>
         </div>
         </div>
-        <!-- /.card-header -->
         <div class="card-body table-responsive p-0">
-        <table class="table table-hover text-nowrap">
-            <thead>
-            <tr>
-                <th>ID</th>
-                <th>User</th>
-                <th>Date</th>
-                <th>Status</th>
-                <th>Reason</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td><a href="<?= SYS_URL ?>guest_mgt/profile.php?id=183">183</td>
-                <td>John Doe</td>
-                <td>11-7-2014</td>
-                <td><span class="tag tag-success">Approved</span></td>
-                <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-            </a>
-            </tr>
-            <tr>
-                <td>219</td>
-                <td>Alexander Pierce</td>
-                <td>11-7-2014</td>
-                <td><span class="tag tag-warning">Pending</span></td>
-                <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-            </tr>
-            <tr>
-                <td>657</td>
-                <td>Bob Doe</td>
-                <td>11-7-2014</td>
-                <td><span class="tag tag-primary">Approved</span></td>
-                <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-            </tr>
-            <tr>
-                <td>175</td>
-                <td>Mike Doe</td>
-                <td>11-7-2014</td>
-                <td><span class="tag tag-danger">Denied</span></td>
-                <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-            </tr>
-            </tbody>
-        </table>
+
+        <?php
+        $con=dbConnect();
+        $sql = "SELECT * FROM guests;";
+        $result = $con->query($sql);
+            if ($result->num_rows > 0) {
+                echo "<table border='1' cellpadding='10'>";
+                echo "<thead>
+                        <tr>
+                            <th>User ID</th>
+                            <th>Full Name</th>
+                            <th>NIC</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                            <th>Gender</th>
+                            <th>T.P. No</th>
+                            <th>profile Create Date </th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>";
+                
+                echo "<tbody>";
+                while($row = $result->fetch_assoc()) {
+                    echo "<tr>";
+                    echo "<td><a href='profile.php?id=" . $row["user_id"] . "'>" . $row["user_id"] . "</a></td>";
+                    echo "<td>" . $row["first_name"] . " " . $row["last_name"] . "</td>";
+                    echo "<td>" . $row["guest_nic"] . "</td>";
+                    echo "<td>" . $row["guest_email"] ."</td>";
+                    echo "<td>" . $row["address"] . ", " . $row["city"] . ", " . $row["province"] . "</td>";
+                    echo "<td>" . $row["gender"] ."</td>";
+                    echo "<td>" . $row["telephone"] . "</td>";
+                    echo "<td>" . $row["guest_created_date"] . "</td>";
+                    echo "<td>
+                    <a href='" . SYS_URL . "guest_mgt/guest_modify.php?id=" . $row['user_id'] . "' class='btn btn-warning btn-sm'>Modify</a>  
+                    <a href='delete_guest.php?id=".$row["user_id"]."' class='btn btn-danger btn-sm'
+                        onclick=\"return confirm('Are you sure?');\">Delete</a>
+                    </td>";
+                    echo "</tr>";
+                }
+                echo "</tbody>";
+                echo "</table>";
+            } else {
+                echo "No records found.";
+            }
+            ?>
+
         </div>
-        <!-- /.card-body -->
     </div>
-    <!-- /.card -->
     </div>
 </div>
 

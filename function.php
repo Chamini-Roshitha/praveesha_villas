@@ -13,3 +13,11 @@ function dbConnect()
         return $conn;
     }
 }
+
+// check login 
+function checklogin()
+{
+    if(!isset($_SESSION['ISLOGIN']) && $_SESSION['ISLOGIN'] != true){
+        header("Location:index.php");
+        }
+}

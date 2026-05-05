@@ -9,7 +9,7 @@ include '../../function.php';
         <img src="<?= WEB_URL ?>assets/images/banner-01.jpg" alt="" style="width: 100vw; height: 90vh; object-fit: cover;">  <!-- mask-image:linear-gradient( to top, transparent 5%, black 50%); -->
     </div>
     <div class="col-4 p-5 m-0" style="background-color:var(--background_translucent);position:absolute;right:0;width: 40vw; height: 90vh;">
-        <h2 style="font-size:10vh;">welcome</h2>
+        <h2 style="font-size:10vh;">Welcome</h2>
         <h2 style="font-size:3vh;">to a relaxing stay <br> at our humble abode</h2>
         <h4 style="font-size:2vh; text-align: justify; text-justify: inter-word; color:var(--primary_font);" class="pt-4">
             At Praveesha Villa, we are committed to operating with sustainability at the heart of everything we do. Our focus extends beyond delivering exceptional guest experiences to fostering a culture of responsibility, care, and community. 
