@@ -1,7 +1,7 @@
 <?php
 session_start();
-include '../function.php';
-include '../config.php';
+include_once '../function.php';
+include_once '../config.php';
 ?>
 
 <?php
@@ -28,6 +28,7 @@ include '../config.php';
                     if (password_verify($password, $row['user_password'])) {
                         $_SESSION['ISLOGIN'] = true;
                         $_SESSION['USER_EMAIL'] = $row['user_email'];
+                        $_SESSION['USER_ID'] = $row['user_id'];
                         header('Location:dashboard.php');
                         exit();
                     }}

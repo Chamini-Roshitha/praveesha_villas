@@ -1,3 +1,18 @@
+<?php
+session_start();
+include_once '../function.php';
+include_once '../config.php';
+$con=dbConnect();
+$user_id = $_SESSION['USER_ID'];
+$sql = "SELECT m.module_id, m.module_names
+        FROM user_modules um
+        JOIN modules m ON um.module_id = m.module_id
+        WHERE um.user_id = $user_id";
+
+$result = $con->query($sql);
+$userModules = [];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -207,10 +222,18 @@
       </div>
 
       <!-- Sidebar Menu -->
+
+      <ul>
+          <?php
+            while ($row = $result->fetch_assoc()) {
+              $userModules[] = $row; 
+              echo "<li>" . $row["module_names"] . "</li>";
+            }
+          ?>
+      </ul>
+
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
           <li class="nav-item menu-open">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt icon-white"></i>
@@ -256,13 +279,13 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
+                <a href="<?= SYS_URL ?>employee_mgt/module_mgt.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Module Management</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
+                <a href="<?= SYS_URL ?>employee_mgt/assign_permission.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Assign permission </p>
                 </a>
